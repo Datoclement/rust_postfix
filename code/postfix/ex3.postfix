@@ -1,0 +1,1 @@
+(postfix 4 4 nget 5 nget mul mul swap 4 nget mul add add)

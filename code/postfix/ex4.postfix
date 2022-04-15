@@ -1,0 +1,1 @@
+(postfix 1 ((3 nget swap exec) (2 mul swap exec) swap) (5 sub) swap exec exec)
