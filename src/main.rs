@@ -1,6 +1,5 @@
 use std::fs;
 
-mod backup;
 mod enums;
 mod postfix_errors;
 
