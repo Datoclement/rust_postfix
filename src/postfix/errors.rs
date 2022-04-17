@@ -1,6 +1,15 @@
-use crate::enums::{Alphabet, PostfixKeyword, PostfixFunction, Command};
+use super::{
+    lexer::{
+        Alphabet, 
+    },
+    enums::{
+        PostfixKeyword, 
+        PostfixFunction, 
+        PostfixCommand
+    },
+};
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq)]
 pub enum PostfixError {
     InvalidCharacterError(char),
     NumberLiteralFollowedByAlphabetError(i32, Alphabet),
@@ -12,8 +21,8 @@ pub enum PostfixError {
     WrongNumberOfFunctionArguments{ function: PostfixFunction, expected_number_of_arguments: usize },
     WrongTypeOfFunctionArguments{ function: PostfixFunction },
     IndexOutOfRangeByNGETFunction { index: i32, min: usize, max: usize },
-    InvalidValueByNGETFunction { command: Command },
-    NonNumeralFinalState { command: Command },
+    InvalidValueByNGETFunction { command: PostfixCommand },
+    NonNumeralFinalState { command: PostfixCommand },
     EmptyStackFinalState,
     DivideByZero,
 }
